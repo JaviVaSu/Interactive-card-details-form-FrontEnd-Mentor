@@ -58,7 +58,7 @@ $(document).ready(function() {
         let mesTarjeta = $("#month").val();
         let expTarjeta = $("#year2").val();
         let cvc = $("#cvc").val();
-        if( (/^[a-zA-Z]+$/.test(nombreTarjeta))){
+        if( (/^[a-zA-Z\s]+$/.test(nombreTarjeta))){
             contador++;
         }else{
             $("#error1").css("display", "block");
@@ -107,5 +107,10 @@ $(document).ready(function() {
         $("#name").text("Jane Appleseed");
         $("#monthlabel").text("00");
         $("#yearlabel").text("00");
+        $("#error1").css("display", "none");
+        $("#error2").css("display", "none");
+        $("#error3").css("display", "none");
+        $("#error4").css("display", "none");
+        $("#error5").css("display", "none");
     });
 });
