@@ -1,0 +1,367 @@
+:root{
+    --White: hsl(0, 0%, 100%);
+    --Light-grayish-violet: hsl(270, 3%, 87%);
+    --Dark-grayish-violet: hsl(279, 6%, 55%);
+    --Very-dark-violet: hsl(278, 68%, 11%);
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--White);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+.first{
+    width: 100%;
+    background-color: var(--White);
+    background-image: url(../images/bg-main-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.partscards{
+    position: relative;
+    width: 100%;
+    height: 19rem;
+}
+.cardback{
+    background-image: url(../images/bg-card-back.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    bottom: 2rem;
+    right: 3rem;
+    width: 26rem;
+    height: 15rem;
+}
+.cardback .code{
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+    color: var(--Light-grayish-violet);
+    position: absolute;
+    top: 5.4rem;
+    right: 3rem;
+}
+.cardtop{
+    background-image: url(../images/bg-card-front.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    bottom: -6rem;
+    left: 3rem;
+    width: 26rem;
+    height: 15rem;
+}
+.cardtop img{
+    width: 5rem;
+    margin: 2rem 0 0 2rem;
+}
+.cardtop .digits16{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cardtop .digits16 p{
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: 0.18rem;
+    margin: 3rem 0 0 0;
+    color: var(--Light-grayish-violet);
+}
+.cardtop .nameanddate{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.cardtop .nameanddate p{
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--Light-grayish-violet);
+}
+.cardtop .name{
+    margin-left: 1.5rem;
+}
+.cardtop .year2{
+    margin-right: 1.5rem;
+}
+.cardtop .infodate{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center ;
+}
+.last{
+    width: 100%;
+    margin-top: 10rem;
+    padding: 0 2rem;
+}
+.last .form .namecard, .last .form .numbercard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+.last label{
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+    color: var(--Very-dark-violet);
+    margin-bottom: 0.3rem;
+}
+.last input{
+    border-radius: 0.7rem;
+    border: solid 0.1rem var(--Light-grayish-violet);
+    padding: 1rem 1rem;
+    margin-bottom: 1rem;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0.15rem;
+    color: var(--Very-dark-violet);
+}
+.last input::placeholder{
+    color: var(--Light-grayish-violet);
+}
+.last .expcvc{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 25% 25% 50%;
+    column-gap: 0.5rem;
+    row-gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+.last .expcvc label:nth-of-type(1){
+    grid-column: 1/3;
+}
+.last .expcvc label:nth-of-type(2){
+    grid-column: 3/4;
+}
+.last a{
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: var(--Very-dark-violet);
+    color: var(--White);
+    border-radius: 0.5rem;
+    padding: 1.8rem 0;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.15rem;
+    cursor: pointer;
+}
+.last .finish{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+}
+.last .finish img{
+    width: 25%;
+}
+.last .finish h2{
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 3rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    color: var(--Very-dark-violet);
+}
+.last .finish p{
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0.15rem;
+    color: var(--Dark-grayish-violet);
+}
+.last .error{
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.15rem;
+    color: red;
+    margin: 0;
+    display: none;
+}
+.last .finish{
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .partscards{
+        height: 25rem;
+    }
+    .cardback{
+        width: 35rem;
+        height: 20rem;
+        right: 15rem;
+    }
+    .cardback .code{
+        top: 7rem;
+        right: 4rem;
+        font-size: 1.8rem;
+    }
+    .cardtop{
+        width: 35rem;
+        height: 20rem;
+        left: 15rem;
+    }
+    .cardtop img{
+        width: 8rem;
+        margin: 3rem 0 0 3rem;
+    }
+    .cardtop .digits16 p{
+        font-size: 2.4rem;
+    }
+    .cardtop .nameanddate p{
+        font-size: 1.6rem;
+    }
+    .cardtop .name{
+        margin-left: 3rem;
+    }
+    .cardtop .year2{
+        margin-right: 3rem;
+    }
+    .last{
+        width: 60%;
+        margin-top: 15rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    body{
+        height: 100vh;
+    }
+    main{
+        display: grid;
+        grid-template-columns: 30% 70%;
+    }
+    .first{
+        height: 100%;
+        background-image: url(../images/bg-main-desktop.png);
+    }
+    .partscards{
+        height: 100%;
+    }
+    .cardback{
+        top: 47%;
+        left: 30%;
+    }
+    .cardtop{
+        top: 17%;
+        left: 12%;
+    }
+    .last{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .last .info, .last .finish{
+        width: 50%;
+        margin-left: 10rem;
+        margin-top: 0;
+    }
+    .last label, .last input, .last button{
+        font-size: 1.6rem;
+    }
+    .last .finish img{
+        width: 35%;
+    }
+    .last .finish h2{
+        font-size: 4rem;
+    }
+    .last .finish p{
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    main{
+        grid-template-columns: 35% 65%;
+    }
+    .cardtop{
+        top: 22%;
+        left: 40%;
+    }
+    .cardback{
+        top: 52%;
+        left: 50%;
+    }
+}
+
+@media (min-width: 1728px) {
+    .cardtop, .cardback{
+        width: 47rem;
+        height: 25rem;
+    }
+    .cardtop img{
+        width: 10rem;
+    }
+    .cardtop .digits16 p{
+        font-size: 3.4rem;
+    }
+    .cardtop .nameanddate p{
+        font-size: 2rem;
+    }
+    .cardtop .name{
+        margin-left: 3.5rem;
+    }
+    .cardtop .year2{
+        margin-right: 3.5rem;
+    }
+    .cardback .code{
+        top: 8rem;
+        right: 6rem;
+        font-size: 2.6rem;
+    }
+    .last .info, .last .finish{
+        width: 40%;
+        margin-left: 10rem;
+        margin-top: 0;
+    }
+    .last label, .last input, .last button{
+        font-size: 2rem;
+        border-radius: 1rem;
+    }
+}

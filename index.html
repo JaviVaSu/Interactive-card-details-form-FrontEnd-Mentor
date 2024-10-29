@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/estilos/styles.css">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+
+</head>
+<body>
+  <script src="./assets/js/jquery-3.7.1.min.js"></script>
+  <script src="./assets/js/app.js"></script>
+  <main>
+
+    <section class="first">
+      <div class="partscards">
+        <div class="cardback">
+          <p class="code" id="cvclabel">000</p>
+        </div>
+
+        <div class="cardtop">
+          <img src="./assets/images/card-logo.svg">
+          <div class="digits16">
+            <p class="numbers" id="numbers">0000 0000 0000 0000</p>
+          </div>
+          <div class="nameanddate">
+            <p class="name" id="name">Jane Appleseed</p>
+            <div class="infodate">
+              <p class="date month" id="monthlabel">00</p>
+              <p class="date slash">/</p>
+              <p class="date year2" id="yearlabel">00</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+      
+    <section class="last">
+      <div class="info" id="cardinfo">
+        <form class="form">
+          <div class="namecard">
+            <label>Cardholder Name</label>
+            <input type="text" autocomplete="off" placeholder="e.g. Jane Appleseed" id="cardname">
+            <p class="error" id="error1">Wrong format, letters only.</p>
+          </div>
+          <div class="numbercard">
+            <label>Card number</label>
+            <input type="text" autocomplete="cc-number" placeholder="e.g. 1234 5678 9123 0000" maxlength="16" id="cardnumber">
+            <p class="error" id="error2">Wrong format, numbers only.</p>
+          </div>
+          <div class="expcvc">
+            <label>Exp. Date (MM/YY)</label>
+            <label>CVC</label>
+            <input type="text" autocomplete="cc-exp-month" placeholder="MM" maxlength="2" id="month">
+            <input type="text" autocomplete="cc-exp-year" placeholder="YY" maxlength="2" id="year2">
+            <input type="text" autocomplete="cc-csc" placeholder="e.g. 123" maxlength="3" id="cvc">
+            <p class="error" id="error3">Can't be blank</p>
+            <p class="error" id="error4">Can't be blank</p>
+            <p class="error" id="error5">Can't be blank</p>
+          </div>
+          <a class="buttonconfirm" id="buttonconfirm">Confirm</a>
+        </form>
+      </div>
+
+      <div class="finish" id="finish">
+        <img src="assets/images/icon-complete.svg" alt="">
+        <h2>Thank you!</h2>
+        <p>We've added your card details</p>
+        <a id="buttoncontinue">Continue</a>
+      </div>
+
+    </section>
+
+  </main>
+  
+</body>
+</html>
